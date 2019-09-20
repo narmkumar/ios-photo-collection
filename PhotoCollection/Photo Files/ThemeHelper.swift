@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// PART 2 - THEME HELPER ✓
 
 class ThemeHelper {
     
@@ -32,5 +33,12 @@ class ThemeHelper {
         return UserDefaults.standard.string(forKey: themePreferenceKey)
     }
     
+    // In the initializer for this class (you will have to call it), check if the themePreference value is nil. If it is, then call one of the setThemePreference functions you just created. This will make it so the first time the user opens the app a preference will be set for them until they choose to change it.
     
+    init() {
+        if themePreference == nil {
+        setThemePreferencetoDark()
+        }
+    }
 }
+
